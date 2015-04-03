@@ -1,16 +1,14 @@
 PLEASE NOTE THAT THIS SOFTWARE IS IN BETA STAGES AND SHOULD NOT BE USED IN A PRODUCTION ENVIROMENT.
 
-Please obtain a license from http://bitsellatm.com/
+Please obtain a free license and API key from http://bitsellatm.com/
 
-Please make sure your installation is located at http://(your-site).com/bitsellatm
+You are also requried to top up and retrieve API keys from https://www.coinpayments.net/
 
-Please get API keys from https://www.coinpayments.net/
-
-Please make sure your API keys from CoinPayments have access to all permissions.
+Please make sure your API keys from CoinPayments have access to ALL permissions.
 
 Adding currencies is simple: make sure BlueTrade and CoinPayments both accept them since we use BlueTrade for calculation of e.g. POT to USD then add another link on index.php
 
-If you require any support, we're always availible. Just send us an email at support@bitsellatm.com :)
+If you require any support, we're always availiable. Just send us an email at support@bitsellatm.com :)
 
 Thanks,
 -- The BitSell Team
@@ -36,3 +34,4 @@ V2.0 beta
 - Displays the Bitcoin to your local currency exchange rate, (set by the ATM owner)
 - Allows the ATM to work in any directory
 - New, shorter code which allows for a cleaner directory structure
+- Revamped readme file
