@@ -68,6 +68,8 @@ Please choose your currency.<br /><br />
 
 <!-- Close tags !-->
 </div>
+<div id="coindesk-widget"></div>
+<script type="text/javascript" src="//widget.coindesk.com/bpiticker/coindesk-widget.min.js?317b2b"></script>
 </body>
 <?php
 }
