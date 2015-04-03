@@ -15,22 +15,22 @@ Thanks,
 
 v1.0
 
--Initial release, yay!
+- Initial release, yay!
 
 v1.1
 
--Fixed some major security vulnerabilities in the 
+- Fixed some major security vulnerabilities in the 
 setup process, special thanks to @damon_jones on Twitter.
 
 v1.3.5
 
--Added in an awesome new feature using the bit.co.in API!
+- Added in an awesome new feature using the bit.co.in API!
 
 V2.0 beta
 
 - Switched to a new business model. 
--Added ability to operate ATM without relying on central BitSell API server.
--Removed QR code scanner and switched over to a completely bit.co.in dependent setup.
+- Added ability to operate ATM without relying on central BitSell API server.
+- Removed QR code scanner and switched over to a completely bit.co.in dependent setup.
 - Displays the Bitcoin to your local currency exchange rate, (set by the ATM owner)
 - Allows the ATM to work in any directory
 - New, shorter code which allows for a cleaner directory structure
