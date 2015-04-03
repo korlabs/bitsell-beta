@@ -35,3 +35,4 @@ V2.0 beta
 - Allows the ATM to work in any directory
 - New, shorter code which allows for a cleaner directory structure
 - Revamped readme file
+- Added back a input for the user to enter the amount of coins that they wish to order
