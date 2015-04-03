@@ -83,7 +83,7 @@ file_put_contents($file, $content);
 <p>
 <center>
 <a href="page5.php">Keys are correct. Tap to proceed. ></a>
-<? 
+<?php 
 }
 ?>
 </center>

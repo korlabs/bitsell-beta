@@ -46,13 +46,13 @@ else
 <body>
 <h1 id="logo">Setup</h1><br />
 <font size="3">Please enter your API key to authenticate with the BitSellATM management panel.<br/><br/>
-<?
+<?php
 $key = preg_replace('/[^-a-zA-Z0-9_]/', '', $_GET['api']);
 if($key == "") {
 ?>
 <form action="" method="get">
 <input name="api"><br /><br /><input type="submit" class="button circled scrolly">
-<?
+<?php
 }
 else
 {
@@ -69,7 +69,7 @@ file_put_contents($file, $content);
 <p>
 <center>
 <a href="page4.php">API key is valid. Tap to proceed. ></a>
-<? 
+<?php 
 }
 }
 ?>

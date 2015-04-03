@@ -45,19 +45,16 @@ else
                         
 <body>
 <h1 id="logo">Setup</h1><br />
-<font size="3">Please enter your website address where the BitSell ATM software  is installed to. <br />(Please make sure BitSell ATM is installed to /bitsellatm of your web server.)<br/><br/>
+<font size="3">Please enter your website address where the BitSell ATM software  is installed to. <br />(Please make sure that you include the public directory of BitSell.)<br/><br/>
 <?php
 
 
-$url = $_GET['url'];
-
-
-
+$url = $_POST["url"];
 if($url == "") {
 ?>
-<form action="" method="get">
-URL: http://<input name="url"> <br />(do not add http:// to your url) <br/><br /><input type="submit" class="button circled scrolly">
-<?
+<form action="" method="post">
+URL: http://<input name="url"> <br />(do not add http:// to your url) <br/><br /><input type="submit" class="button circled scrolly"></form>
+<?php
 }
 else {
 $file = "../includes/configuration.php";
@@ -69,7 +66,7 @@ file_put_contents($file, $content);
 <p>
 <center>
 <a href="page6.php">URL is valid. Tap to proceed. ></a>
-<? 
+<?php 
 }
 ?>
 </center>

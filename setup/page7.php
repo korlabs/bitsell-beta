@@ -55,7 +55,7 @@ file_put_contents($file, $content);
 <p>
 <center>
 <a href="../index.php">Tap to finish setup. ></a>
-<? 
+<?php 
 ?>
 </center>
 </p>

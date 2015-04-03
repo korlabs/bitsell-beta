@@ -49,15 +49,15 @@ else
 <?php
 
 
-$paypal_address = $_GET['paypal_address'];
+$paypal_address = $_POST['paypal_address'];
 
 
 
 if($paypal_address == "") {
 ?>
-<form action="" method="get">
+<form action="" method="post">
 <input name="paypal_address"> <br /><input type="submit" class="button circled scrolly">
-<?
+<?php
 }
 else {
 $file = "../includes/configuration.php";
@@ -69,7 +69,7 @@ file_put_contents($file, $content);
 <p>
 <center>
 <a href="page7.php">Email is valid. Tap to proceed. ></a>
-<? 
+<?php 
 }
 ?>
 </center>

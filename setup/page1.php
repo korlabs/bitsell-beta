@@ -55,7 +55,7 @@ else
 <?php
 } else { 
 
-$language = preg_replace('/[^A-Za-z]/', '', $_GET['lang']);
+$language = $_GET['lang'];
 
 $file = '../includes/configuration.php';
 $content = file_get_contents($file);

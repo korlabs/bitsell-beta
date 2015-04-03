@@ -9,7 +9,11 @@ else
 {
 $filename = 'setup';
 if (file_exists($filename)) {
-    die("Security error! <b>Please delete the 'setup' folder for this software to function.");
+    die("
+
+
+
+        Security error! <b>Please delete the 'setup' folder for this software to function.");
 } 
 // continue on with system 
 $type = $_GET[type];
@@ -47,7 +51,56 @@ echo "
 
 <?php
 if($_GET[page]=="" OR $_GET[page]=="index") {
-   ?> <body class="homepage">
+   ?>         <body class="homepage">
+
+        <!-- Header -->
+            <div id="header">
+<nav id="nav">
+                        <ul>
+                            <li style="white-space: nowrap;"><a href="?page=about">About this ATM</a></li>
+                
+                                    <li style="white-space: nowrap;"><a href="?page=index" style="display: block;">Get more coins</a></li>
+                                                          <li style="white-space: nowrap;"><a href="?page=contact">Contact Owner</a></li>
+                            <li style="white-space: nowrap;"><a href="https://twitter.com/bitsellatm">Follow BitSell ATM on Twitter</a></li>
+
+                        </ul>
+                    </nav>
+
+                
+                        
+                <!-- Inner -->
+                    <div class="inner">
+                        <header>
+
+
+                        <h1 id="logo">BitSellATM</h1><br />
+Let's fetch your coin address.<br /><br />
+<a href=?page=1&type=BTC class="button circled scrolly">BTC</a> 
+<a href=?page=1&type=DOGE class="button circled scrolly">DGC</a>   
+<a href=?page=1&type=DRK class="button circled scrolly">DRK</a>
+<a href=?page=1&type=LTC class="button circled scrolly">LTC</a>
+<a href=?page=1&type=NMC class="button circled scrolly">NMC</a>
+<a href=?page=1&type=QRK class="button circled scrolly">QRK</a>
+
+<!-- Close tags !-->
+</div>
+<Center>
+<div id="coindesk-widget"></div>
+<script type="text/javascript" src="//widget.coindesk.com/bpiticker/coindesk-widget.min.js?317b2b"></script>
+
+<br/><br/>
+BitSell ATM version 2 <FONT COLOR=RED>BETA</FONT>
+</center>
+
+</div>
+</body>
+<?php
+}
+
+// Page one of order 
+elseif ($_GET[page]=="1") {
+?>
+<body class="homepage">
 
         <!-- Header -->
             <div id="header">
@@ -58,32 +111,11 @@ if($_GET[page]=="" OR $_GET[page]=="index") {
 
 
                         <h1 id="logo">BitSellATM</h1><br />
-Please choose your currency.<br /><br />
-<a href=order/?page=1&type=BTC class="button circled scrolly">BTC</a> 
-<a href=order/?page=1&type=DOGE class="button circled scrolly">DGC</a>   
-<a href=order/?page=1&type=DRK class="button circled scrolly">DRK</a>
-<a href=order/?page=1&type=LTC class="button circled scrolly">LTC</a>
-<a href=order/?page=1&type=NMC class="button circled scrolly">NMC</a>
-<a href=order/?page=1&type=QRK class="button circled scrolly">QRK</a>
-
-<!-- Close tags !-->
-</div>
-<div id="coindesk-widget"></div>
-<script type="text/javascript" src="//widget.coindesk.com/bpiticker/coindesk-widget.min.js?317b2b"></script>
-</body>
-<?php
-}
-
-// Page one of order 
-elseif ($_GET[page]=="1") {
-?>
-<body>
-<h1>BitSellATM</h1>
 Let's fetch your coin address.
   <form id="result" method="get" action="">
     <fieldset>
         <input type="hidden" name="page" value="2">
-<input type="hidden" name="type" value="<? Echo "$type"; ?>">
+<input type="hidden" name="type" value="<?php Echo "$type"; ?>">
 <legend>Amount of coins you wish to orde</legend><input name="amount">
       <legend>Please create a shortname at bit.co.in.</legend>
 
@@ -120,7 +152,7 @@ Please confirm your order!<br /><br />
 
 
 
-<?
+<?php
 $coin_address = $_GET[address];
 $email = $_GET[email];
 $amount = $_GET[amount];
@@ -159,7 +191,7 @@ Please proceed to pay.
 
 
 
-<?
+<?php
 $type = $_GET[type];
 $coin_address = $_GET[address];
 $rand = rand(1882,2099);
@@ -174,13 +206,13 @@ echo " = $$pay USD</b>
 ?>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="<? echo $paypal_address; ?>">
+<input type="hidden" name="business" value="<?php echo $paypal_address; ?>">
 <input type="hidden" name="quantity" value="1">
 <input type="hidden" name="item_name" value="<?php echo "$coin_address"; ?> ">
 <input type="hidden" name="notify_url" value="http://<?php echo $address; ?>/api/paypal/ipn.php">
 <input type="hidden" name="item_number" value="<?php echo $rand; ?>">
 <input type="hidden" name="amount" value="<?php echo $pay; ?>">
-<input type="hidden" name="return" value="http://<? echo "$address/?page=4&coins=$coins&money=$pay&coin_address=$coin_address&type=$type";  ?>">
+<input type="hidden" name="return" value="http://<?php echo "$address/?page=4&coins=$coins&money=$pay&coin_address=$coin_address&type=$type";  ?>">
 <br/><input type="image" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_buynow_pp_142x27.png" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
 </form>
 
@@ -205,7 +237,7 @@ Please check your wallet within the next 5 minutes.<br />
 
 
 
-<?
+<?php
 $coin_address = $_GET[coin_address];
 $coins = $_GET[coins];
 $type = $_GET[type];
